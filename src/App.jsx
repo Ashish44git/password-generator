@@ -8,7 +8,7 @@ function App() {
 
   const passGen = useCallback(() => {
     let pass = "";
-    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (numAllowed) str += "1234567890";
     if (charAllowed) str += "!@#$%^&*()_+{}|";
 
@@ -38,9 +38,9 @@ const copy=useCallback(()=>{
   return (
     <>
       <div className="w-full h-screen bg-yellow-200 text-white flex text-xl flex-wrap items-center justify-center ">
-        <div className="bg-gray-800  mx-10 flex flex-col justify-center items-center h-2/4 my-8 p-4 rounded-lg shadow-xl shadow-gray-900   ">
+        <div className="bg-gray-800  mx-10   my-8 p-4 rounded-lg shadow-xl shadow-gray-900   ">
          
-             <div className=" text-center text-lg font-serif text-yellow-400 tracking-wide mb-4  ">
+             <div className=" text-center text-sm font-serif text-yellow-400 tracking-wide mb-4  ">
             <h1>PASSWORD GENERATOR</h1>
           </div>
 
@@ -51,7 +51,7 @@ const copy=useCallback(()=>{
               placeholder="Password"
               readOnly
               ref={passRef}
-              className="w-5/6 rounded-xl text-black outline-none border-none px-3 py-2 my-2 mx-1"
+              className="w-5/6 rounded-xl text-sm text-black outline-none border-none px-3 py-2 my-2 mx-1"
             />
             <button onClick={copy}  className="bg-blue-700 w-1/6 rounded-xl text-xs h-10 my-2">
               Save
